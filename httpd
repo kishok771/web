@@ -1,0 +1,11 @@
+- hosts: all
+  tasks: 
+    - name: "installing the package"
+      package:
+        - name: "httpd"
+          state: present
+
+    - name: "start the service"
+      service:
+        - name: "httpd"
+          state: started
